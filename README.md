@@ -9,4 +9,6 @@ npx create-next-app@latest discord-clone --typescript --tailwind --eslint
 npx shadcn-ui@latest init
 # command to install component library ui 
 npx shadcn-ui@latest add button
+# command install clerk dashboard
+npm install @clerk/nextjs
 ```
