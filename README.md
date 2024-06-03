@@ -7,8 +7,6 @@ First, run the development server:
 npx create-next-app@latest discord-clone --typescript --tailwind --eslint   
 # command install npx shadcn ui (#choose default/stone/yes)
 npx shadcn-ui@latest init
-
-
+# command to install component library ui 
+npx shadcn-ui@latest add button
 ```
-
-# discord-clone
