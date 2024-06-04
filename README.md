@@ -11,4 +11,8 @@ npx shadcn-ui@latest init
 npx shadcn-ui@latest add button
 # command install clerk dashboard
 npm install @clerk/nextjs
+# command install dark mode 
+npm i next-themes 
+npx shadcn-ui@latest add dropdown-menu
+
 ```
