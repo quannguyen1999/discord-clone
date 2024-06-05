@@ -14,5 +14,12 @@ npm install @clerk/nextjs
 # command install dark mode 
 npm i next-themes 
 npx shadcn-ui@latest add dropdown-menu
-
+# command install primsa 
+npm i -D prisma 
+npx prisma init
+# command to update schema and push to server 
+npx prisma generate 
+npx prisma db push
+# command install prisma client 
+npm i @prisma/client
 ```
