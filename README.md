@@ -22,4 +22,17 @@ npx prisma generate
 npx prisma db push
 # command install prisma client 
 npm i @prisma/client
+# command open ui database prisma
+npx prisma studio
+(this will on port 5555)
+# install modal ui 
+npx shadcn-ui@latest add dialog 
+npx shadcn-ui@latest add input 
+npx shadcn-ui@latest add form
+# install upload thing 
+npm install uploadthing @uploadthing/react react-dropzone
+
+
+
+
 ```
