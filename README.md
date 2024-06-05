@@ -31,6 +31,12 @@ npx shadcn-ui@latest add input
 npx shadcn-ui@latest add form
 # install upload thing 
 npm install uploadthing @uploadthing/react react-dropzone
+# install axios 
+npm i axios
+# install uuid
+npm i uuid 
+npm i -D @types/uuid
+
 
 
 
