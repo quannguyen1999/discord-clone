@@ -6,9 +6,6 @@ import { useModal } from "@/hooks/user-modal-store"
 
 export const NavigationAction = () => {
     const {onOpen} = useModal();
-
-
-
     return (
         <div>
             <ActionTooltip
