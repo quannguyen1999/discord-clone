@@ -40,6 +40,8 @@ npm i -D @types/uuid
 npx shadcn-ui@latest add tooltip
 npx shadcn-ui@latest add seperator
 npx shadcn-ui@latest add scroll-area   
+npx shadcn-ui@latest add avatar
+npm i query-string
 
 
 
