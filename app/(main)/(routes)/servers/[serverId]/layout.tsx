@@ -1,23 +1,47 @@
-// import { currentProfile } from "@/lib/current-profile";
-// import { redirectToSignIn } from "@clerk/nextjs/server";
+import { currentProfile } from "@/lib/current-profile";
+import { redirectToSignIn } from "@clerk/nextjs/server";
+import {db} from '@/lib/db';
+import { redirect } from "next/navigation";
+import { ServerSidebar } from "@/components/server/server-sidebar";
+const ServerIdLayout = async ({
+    children,
+    params
+} : {
+    children: React.ReactNode;
+    params: {serverId: string};
+}) => {
+    const profile = await currentProfile();
 
-// const ServerIdLayout = async ({
-//     children,
-//     params
-// } : {
-//     children: React.ReactNode;
-// }) => {
-//     const profile = await currentProfile();
+    if(!profile){
+        return redirectToSignIn();
+    }
 
-//     if(!profile){
-//         return redirectToSignIn();
-//     }
+    const server = await db.server.findUnique({
+        where: {
+            id: params.serverId,
+            members: {
+                some: {
+                    profileId: profile.id
+                }
+            }
+        }
+    });
 
-//     return (
-//         <div>
-//             {children}
-//         </div>
-//     )
-// }
+    if(!server){
+        return redirect("/");
+    }
 
-// export default ServerIdLayout;
+    return (
+        <div className="h-full">
+            <div className="hidden fixed md:flex h-full w-60 z-20 flex-col inset-y-0">
+                <ServerSidebar serverId={params.serverId}/>
+            </div>
+            <main className="h-full md:pl-60">
+                {children}
+            </main>
+            
+        </div>
+    )
+}
+
+export default ServerIdLayout;
