@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en" suppressContentEditableWarning>
+      <html lang="en" suppressContentEditableWarning={true}>
         <body className={cn(font.className,
             "bg-white dark:bg-[#313338]"          
           )}>

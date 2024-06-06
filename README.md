@@ -36,7 +36,10 @@ npm i axios
 # install uuid
 npm i uuid 
 npm i -D @types/uuid
-
+# install tooltip 
+npx shadcn-ui@latest add tooltip
+npx shadcn-ui@latest add seperator
+npx shadcn-ui@latest add scroll-area   
 
 
 

@@ -37,6 +37,7 @@ const formSchema = z.object({
     })
 })
 export const InitialModal = () => {
+    // console.log("fucking")
     const [isMounted, setIsMounted] = useState(false);
     const router = useRouter();
 
@@ -56,6 +57,7 @@ export const InitialModal = () => {
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         try{
+            // http://localhost:3000/servers/66607289f6417a754b9a4ed0
             await axios.post("/api/servers", values);
 
             form.reset();
@@ -80,7 +82,7 @@ export const InitialModal = () => {
                         Customize your server
                     </DialogTitle>
                     <DialogDescription className="text-center text-zinc-500">
-                        Give your server a personality with a name adn an image, You can always change it later
+                        Give your server a personality with a name and an image, You can always change it later
                     </DialogDescription>
                 </DialogHeader>
                 <Form {...form}>
@@ -101,11 +103,10 @@ export const InitialModal = () => {
                                                     onChange={field.onChange}
                                                 />
                                             </FormControl>
+                                            <FormMessage />
                                         </FormItem>
                                     )}
-                                >
-
-                                </FormField>
+                                />
                             </div>
                             <FormField 
                                 control={form.control}
@@ -130,7 +131,7 @@ export const InitialModal = () => {
                             />
                         </div>
                         <DialogFooter className='bg-gray-100 px-6 py-4'>
-                            <Button variant="primary" disabled={isLoading}>
+                            <Button type="submit" variant="primary" disabled={isLoading}>
                                 Create
                             </Button>
                         </DialogFooter>
