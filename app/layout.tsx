@@ -24,8 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+   
       <html lang="en" suppressContentEditableWarning={true}>
+         <ClerkProvider>
         <body className={cn(font.className,
             "bg-white dark:bg-[#313338]"          
           )}>
@@ -38,7 +39,8 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </body>
+        </ClerkProvider>
       </html>
-    </ClerkProvider>
+    
   );
 }

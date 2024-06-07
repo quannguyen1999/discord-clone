@@ -1,9 +1,6 @@
-import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
-// Define routes that should be protected
-// const isProtectedRoute = createRouteMatcher([
-//     '/' // Add any additional routes here
-//   ]);// Update clerkMiddleware to manually protect routes
-const isPublicRoute = createRouteMatcher(['/api/uploadthing']);
+import { clerkMiddleware, createRouteMatcher, redirectToSignIn } from "@clerk/nextjs/server";
+import { NextRequest, NextResponse } from "next/server";
+const isPublicRoute = createRouteMatcher(['/api/uploadthing', '/sign-in(.*)', '/sign-up(.*)']);
 
 export default clerkMiddleware((auth, req) => {
     if (!isPublicRoute(req)) {
