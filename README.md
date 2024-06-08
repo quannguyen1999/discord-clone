@@ -42,6 +42,8 @@ npx shadcn-ui@latest add seperator
 npx shadcn-ui@latest add scroll-area   
 npx shadcn-ui@latest add avatar
 npx shadcn-ui@latest add select
+npx shadcn-ui@latest add command
+
 npm i query-string
 
 
