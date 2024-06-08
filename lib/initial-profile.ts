@@ -4,8 +4,6 @@ import { Profile } from "@prisma/client";
 import { RedirectToSignIn } from "@clerk/nextjs";
 export const initialProfile: any = async () => {
     const user = await currentUser();
-    console.log("testomg")
-    console.log(user)
     if(!user){
         return redirectToSignIn();
     }
