@@ -43,7 +43,7 @@ npx shadcn-ui@latest add scroll-area
 npx shadcn-ui@latest add avatar
 npx shadcn-ui@latest add select
 npx shadcn-ui@latest add command
-
+npx shadcn-ui@latest add sheet
 npm i query-string
 
 
