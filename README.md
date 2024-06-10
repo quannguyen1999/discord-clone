@@ -44,8 +44,10 @@ npx shadcn-ui@latest add avatar
 npx shadcn-ui@latest add select
 npx shadcn-ui@latest add command
 npx shadcn-ui@latest add sheet
+npx shadcn-ui@latest add badge
 npm i query-string
-
+npm i socket-io
+npm i socket. io-client
 
 
 
