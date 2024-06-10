@@ -1,5 +1,5 @@
 'use client'
-
+import data from '@emoji-mart/data'
 import { Smile } from "lucide-react";
 import Picker from '@emoji-mart/react';
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
@@ -11,7 +11,6 @@ interface EmojiPickerProps {
 export const EmojiPicker = ({
     onChange
 }: EmojiPickerProps) => {
-    const {data} = useModal();
     return (
         <Popover>
             <PopoverTrigger>
