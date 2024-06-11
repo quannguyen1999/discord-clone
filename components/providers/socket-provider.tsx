@@ -7,7 +7,7 @@ type SocketContextType = {
     isConnected: boolean;
 }
 
-const SocketContext = createContext<SocketContextType>({
+export const SocketContext = createContext<SocketContextType>({
     socket: null,
     isConnected: false
 });
@@ -41,9 +41,6 @@ export const SocketProvider = ({
         return () => {
             socketInstance.disconnect();
         }
-
-
-        
     }, []);
 
     return (

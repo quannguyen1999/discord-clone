@@ -46,8 +46,10 @@ npx shadcn-ui@latest add command
 npx shadcn-ui@latest add sheet
 npx shadcn-ui@latest add badge
 npx shadcn-ui@latest add popover
-npm i emoji-mart @emoji-mart/data @emoji-mart/r
-eact
+npm i emoji-mart @emoji-mart/data @emoji-mart/react
+npm i @tanstack/reacr-query
+npm i date-fns
+
 npm i query-string
 npm i socket-io
 npm i socket. io-client

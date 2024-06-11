@@ -35,6 +35,7 @@ const formSchema = z.object({
         message: 'attechment is required'
     })
 })
+export const runtime = 'edge' ;
 export const MessageFileModal = () => {
     const {isOpen, onClose, type, data} = useModal();
     const router = useRouter();
@@ -45,7 +46,7 @@ export const MessageFileModal = () => {
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
-            fileUrl: "",
+            fileUrl: "https://utfs.io/f/f5e8e9b9-43e1-4f2d-9d68-8ee834906e5c-1x9cqw.jpeg",
         }
     });
 
@@ -58,12 +59,13 @@ export const MessageFileModal = () => {
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         try{
+            //TODO need to fix
             const url = queryString.stringifyUrl({
-                url: apiUrl || "",
+                url: apiUrl + "xx" || "",
                 query
             });
 
-            await axios.post(url, {
+            await axios.post(apiUrl || "", {
                 ...values,
 
             });
@@ -74,7 +76,7 @@ export const MessageFileModal = () => {
 
 
         }catch(error){
-            console.log(error);
+            console.log(error)
         }
     }
     return (
@@ -115,7 +117,7 @@ export const MessageFileModal = () => {
                         </div>
                         <DialogFooter className='bg-gray-100 px-6 py-4'>
                             <Button type="submit" variant="primary" disabled={isLoading}>
-                                Send
+                                fuck Send
                             </Button>
                         </DialogFooter>
                     </form>
