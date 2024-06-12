@@ -6,7 +6,8 @@ import { Loader2, ServerCrash } from "lucide-react";
 import { Fragment } from "react";
 import {format} from 'date-fns';
 import { ChatItem } from "./chat-item";
-const DATE_FORMAT = "d MMM yyyy, HH:mm"
+const DATE_FORMAT = "d MMM yyyy, HH:mm";
+
 
 type MessageWithMemberWIthProfile = Message & {
     member: Member & {
@@ -52,12 +53,14 @@ export const ChatMessages = ({
         paramValue
     })
 
+    
+
     if(status === 'pending'){
         return (
-            <div className="felx flex-col flex-1 justify-center items-center">
+            <div className="flex flex-col flex-1 justify-center items-center">
                 <Loader2 className="h-7 w-7 text-zinc-500 animate-spin my-4"/>
                 <p className="text-xs text-zinc-500 dark:text-zinc-400">
-                    Loading messages...
+                    Loading xx messages...
                 </p>
 
             </div>
