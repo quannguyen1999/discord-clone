@@ -61,7 +61,7 @@ export const MessageFileModal = () => {
         try{
             //TODO need to fix
             const url = queryString.stringifyUrl({
-                url: apiUrl + "xx" || "",
+                url: apiUrl  || "",
                 query
             });
 

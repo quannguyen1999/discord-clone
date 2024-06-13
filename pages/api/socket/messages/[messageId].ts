@@ -8,6 +8,7 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponseServerIo,
 ) {
+    console.log(req.method)
     if(req.method !== 'DELETE' && req.method !== 'PATCH'){
         return res.status(405).json({error: 'Method not allowrd'});
     }
@@ -29,6 +30,7 @@ export default async function handler(
             return new NextResponse("Channel id is missing'" , {status : 400})
         }
 
+        console.log("calling")
         const server = await db.server.findFirst({
             where: {
                 id: serverId as string,
