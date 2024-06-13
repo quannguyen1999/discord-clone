@@ -54,6 +54,8 @@ npm i query-string
 npm i socket-io
 npm i socket. io-client
 
+npm install livekit-server-sdk @livekit/components-react @livekit/components-styles --save
+
 
 
 ```
