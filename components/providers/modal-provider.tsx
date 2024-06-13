@@ -12,10 +12,11 @@ import { DeleteChannelModal } from "../modals/delete-channel-modal";
 import { EditChannelModal } from "../modals/edit-channel-modal";
 import { MessageFileModal } from "../modals/message-file-modal";
 import { useModal } from "@/hooks/user-modal-store";
+import { DeleteMessageModal } from "../modals/delete-message-modal";
 
 export const ModalProvider = () => {
     const {onOpen} = useModal();
-    
+
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
@@ -38,6 +39,7 @@ export const ModalProvider = () => {
             <DeleteChannelModal />
             <EditChannelModal />
             <MessageFileModal />
+            <DeleteMessageModal />
         </>
     )
 }
